@@ -53,7 +53,7 @@ const Login = () => {
         // google
         google()
             .then(() => {
-                toast.success("Google singin successful")
+                toast.success("Google singIn successful")
             })
             .catch(error => {
                 toast.error(error.message);
