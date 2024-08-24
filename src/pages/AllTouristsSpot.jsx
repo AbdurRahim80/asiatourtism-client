@@ -46,15 +46,15 @@ const AllTouristsSpot = () => {
 
                                     <div className="border border-black/20 p-2 rounded-md my-2">
                                         <div className="flex justify-between items-center my-2">
-                                            <p className="text-black/60">Travel time: {spot.travel_time}</p>
-                                            <p className="text-black/60">Visitors: {spot.totalVisitorsPerYear}</p>
+                                            <p className="text-black/70">Travel time: {spot.travel_time}</p>
+                                            <p className="text-black/70">Visitors: {spot.totalVisitorsPerYear}</p>
                                         </div>
-                                        <p className="my-2">Cost: {spot.AvgConst}</p>
+                                        <p className=" text-black/70 my-2">Cost: {spot.AvgConst}</p>
                                     </div>
                                 </div>
 
                                 <Link to="/details">
-                                    <button className="btn bg-black/40 text-white hover:bg-black/45">View Details</button>
+                                    <button className="btn bg-teal-400 text-black hover:bg-black/45">View Details</button>
                                 </Link>
                             </div>
                         </div>

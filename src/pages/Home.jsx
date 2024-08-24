@@ -1,16 +1,30 @@
-import { useContext } from "react";
+
+import About from "../componenst/About";
 import Banner from "../componenst/Banner";
-import { AuthContext } from "../componenst/providers/AuthProviders";
+import OtherSpot from "../componenst/OtherSpot";
+
+import TouristsSpots from "../componenst/TouristsSpots";
+import { useLoaderData } from "react-router-dom";
 
 
 const Home = () => {
-    const name = useContext(AuthContext);
-    console.log(name);
+
+    const touristSpotData = useLoaderData();
+
     return (
         <div>
-            <Banner/>
-            <p>{name.name}</p>
-           <h1 className="text-red-800"> Home</h1>
+            <Banner />
+
+            <div>
+                <TouristsSpots touristSpotData={touristSpotData} />
+            </div>
+            <div>
+                <OtherSpot />
+            </div>
+            <div>
+                <About/>
+            </div>
+
         </div>
     );
 };
