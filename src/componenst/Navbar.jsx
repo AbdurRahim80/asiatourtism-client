@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./providers/AuthProviders";
-import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
 
@@ -107,11 +106,7 @@ const Navbar = () => {
                 {
                     user ?
                         <div className='flex items-center gap-2'>
-                            {/* <Tooltip anchorSelect=".my-anchor-element" place="bottom">
-                            <img src={user.photoURL
-                                } className='w-12 h-12 rounded-full' alt="" />
-                            {user.displayName}
-                            </Tooltip> */}
+                            
                             <div className="tooltip  tooltip-bottom" data-tip={user.displayName}>
                                 <div className="w-12 h-12"><img src={user.photoURL
                                 } className='w-12 h-12 rounded-full' alt="" /></div>
