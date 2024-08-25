@@ -26,7 +26,7 @@ const AddTouristsSpot = () => {
         const newSpotList = { spot, country, location, AvgConst, seasonality, photoUrl, travel_time, totalVisitorsPerYear, description, name, email }
         form.reset();
         console.log(newSpotList);
-        fetch('http://localhost:5000/spot', {
+        fetch('https://asiatourtism-server.vercel.app/spot', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

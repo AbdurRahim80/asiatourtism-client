@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
-                loader: () => fetch('http://localhost:5000/spot')
+                loader: () => fetch('https://asiatourtism-server.vercel.app/spot')
             },
             {
                 path: "/alltouris",
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
             {
                 path: "/details/:id",
                 element: <PrivateRouter><Details /></PrivateRouter>,
-                loader: () => fetch(`http://localhost:5000/spot`)
+                loader: () => fetch(`https://asiatourtism-server.vercel.app/spot`)
                 
             },
             {

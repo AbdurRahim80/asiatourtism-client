@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const MyList = () => {
     const { user, spot } = useContext(AuthContext);
     const [mySpotList, setMySpotList] = useState(useEffect(() => {
-        fetch(`http://localhost:5000/myList/${user?.email}`)
+        fetch(`https://asiatourtism-server.vercel.app/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log("data", data);
@@ -36,7 +36,7 @@ const MyList = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/spot/${_id}`, {
+                fetch(`https://asiatourtism-server.vercel.app/spot/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
